@@ -1,0 +1,19 @@
+{
+  "name": "nodejsmailer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/pubsub": "^4.1.1",
+    "amqplib": "^0.8.0",
+    "mysql2": "^2.3.3",
+    "nodemailer": "^6.7.3",
+    "sequelize": "^6.19.0"
+  }
+}

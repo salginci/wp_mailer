@@ -1,0 +1,10 @@
+{
+    "amqp": "amqp://rabbitmq",
+    "queue": "SMTP_MAILER",
+  
+    "server": {
+      "port": 15692,
+      "host": "157.245.24.226"
+    }
+  }
+  
