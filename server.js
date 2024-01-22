@@ -40,6 +40,7 @@ async function handleMessage(message) {
     await transport.sendMail(mailmessage);
 
     console.log("Email sent successfully");
+    // If you dont acknowledge the message, it will be redelivered
     message.ack();
     
   } catch (error) {
