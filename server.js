@@ -1,9 +1,18 @@
  
 const { PubSub } = require('@google-cloud/pubsub');
-const credentials = require('./sub-key.json');
-const pubsub = new PubSub({ credentials });
+//const credentials = require('./sub-key.json');
+
 const nodemailer = require('nodemailer');  // Import your email settings module
 
+const keyFilePath = '/secrets/subkey.json';
+const keyFileContent = fs.readFileSync(keyFilePath, 'utf8');
+// Assume 'base64String' contains your base64 encoded data
+const decodedString = Buffer.from(keyFileContent, 'base64').toString('utf8');
+
+const credentials = JSON.parse(decodedString);
+
+
+const pubsub = new PubSub({ credentials });
 async function handleMessage(message) {
   try {
     // Extract necessary data from the message
